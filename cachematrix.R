@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This program caches the inverse of a matrix so that if the inverse of a specific matrix 
+## exists in the memory, it is returned without having to compute it again
 
-## Write a short comment describing this function
+## makeCacheMatrix function has sub-functions to get and set value at both 
+## the global and parent environment to allow for cahce to happen
 
 makeCacheMatrix <- function(x = matrix()) {
    #clear the inverse matrix
@@ -27,7 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The function here first looks up if the inverse of a matrix is cached.
+## If it is cached, then return it
+## If not, calculate the inverse matrix 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
